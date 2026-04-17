@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yes 💖</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #fbe3e8, #f8b6c1);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 50px;
+      color: #e83e8c;
+    }
+
+    p {
+      font-size: 24px;
+      color: #ff4d88;
+      font-weight: bold;
+    }
+
+    img {
+      width: 250px;
+      margin: 20px 0;
+    }
+
+    .confetti {
+      position: fixed;
+      top: -10px;
+      width: 10px;
+      height: 10px;
+      background: pink;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div>
+  <h1>Knew you would say yes! 🎉</h1>
+
+  <img src="./Will you be my Valentine_ 💕_files/u-u-qua-qua-u-quaa.gif">
+
+  <p>You just made me the happiest person! 💕</p>
+</div>
+
+<script>
+  const colors = ["#ff6fa5", "#ffd166", "#ff8c94", "#ffffff"];
+
+  for (let i = 0; i < 80; i++) {
+    const confetti = document.createElement("div");
+    confetti.className = "confetti";
+    confetti.style.left = Math.random() * 100 + "vw";
+    confetti.style.animationDuration = (3 + Math.random() * 4) + "s";
+    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+    document.body.appendChild(confetti);
+  }
+</script>
+
+</body>
+</html>
